@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+
+    <ImageView
+        android:id="@+id/background_pic"
+        android:layout_width="514dp"
+        android:layout_height="983dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_page"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/tile1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/rounded_transparent_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/background_pic"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261">
+
+        <ImageView
+            android:id="@+id/history_book"
+            android:layout_width="122dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="42dp"
+            app:srcCompat="@drawable/history_book" />
+
+        <TextView
+            android:id="@+id/ciekawostki"
+            android:layout_width="170dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Ciekawostki"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/tile2"
+        android:layout_width="184dp"
+        android:layout_height="185dp"
+        android:background="@drawable/rounded_transparent_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/background_pic"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261">
+
+        <TextView
+            android:id="@+id/kawiarnia"
+            android:layout_width="170dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Kawiarnie"
+            android:textColor="#FFFFFF" />
+        <ImageView
+            android:id="@+id/coffee"
+            android:layout_width="178dp"
+            android:layout_height="143dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="33dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/coffee" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tile3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/rounded_transparent_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/background_pic"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644">
+
+        <TextView
+            android:id="@+id/pogoda"
+            android:layout_width="170dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Pogodne zwiedzanie"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/weather"
+            android:layout_width="177dp"
+            android:layout_height="168dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/weather" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tile4"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/rounded_transparent_bg"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/background_pic"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" >
+
+        <TextView
+            android:id="@+id/locatiion"
+            android:layout_width="170dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Ciekawe lokalizacje"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="143dp"
+            android:layout_height="119dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/location" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
