@@ -24,11 +24,26 @@ public class MainPage extends AppCompatActivity {
         tile3 = findViewById(R.id.tile3);
         tile4 = findViewById(R.id.tile4);
 
-        // Set OnClickListener for tile3 to launch MainActivity
+
+        tile1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, CityFactActivity.class);
+                startActivity(intent);
+            }
+        });
         tile3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPage.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tile4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, ciekaweLokalizacje.class);
                 startActivity(intent);
             }
         });

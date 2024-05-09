@@ -29,6 +29,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".ciekaweLokalizacje"
+            android:exported="false" />
+        <activity android:name=".StreetViewActivity"/>
+        <activity android:name=".LocalizationActivity" /> <!-- Upewnij się, że ta linijka jest dodana -->
+        <activity android:name=".SearchCityFactActivity" />
+        <activity android:name=".CityFactActivity"/>
+
+
     </application>
 
 </manifest>

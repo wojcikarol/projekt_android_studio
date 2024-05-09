@@ -23,7 +23,7 @@
         android:layout_height="57dp"
         android:background="@drawable/transparent_background"
         android:onClick="check"
-        android:text="Check the weather"
+        android:text="Check town"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
