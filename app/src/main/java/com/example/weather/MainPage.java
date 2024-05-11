@@ -17,7 +17,7 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page); // Assuming your layout file name is main_page.xml
+        setContentView(R.layout.activity_main_page);
 
         tile1 = findViewById(R.id.tile1);
         tile2 = findViewById(R.id.tile2);
