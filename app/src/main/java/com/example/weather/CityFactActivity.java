@@ -17,16 +17,12 @@ public class CityFactActivity extends AppCompatActivity implements Connect.Conne
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ciekawostki);
 
-        // Find the TextView where the data will be displayed
         dataTextView = findViewById(R.id.dataTextView);
 
-        // Find the EditText for the city
         cityEditText = findViewById(R.id.cityEditText);
 
-        // Find the search button
         Button searchButton = findViewById(R.id.searchButton);
 
-        // Set click listener for the search button
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,18 +32,14 @@ public class CityFactActivity extends AppCompatActivity implements Connect.Conne
     }
 
     private void searchCity() {
-        // Get the entered city
         String city = cityEditText.getText().toString();
 
-        // Execute the AsyncTask to establish the database connection and execute the query
         new Connect(this, city).execute();
     }
 
     @Override
     public void onQueryComplete(String result) {
-        // Handle the result from the database query
         if (result != null) {
-            // Display the retrieved data in the TextView
             dataTextView.setText(result);
             showToast("Pobrano dane z bazy danych.");
         } else {
