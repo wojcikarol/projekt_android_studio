@@ -19,14 +19,11 @@ public class StreetViewActivity extends AppCompatActivity {
 
         webView = findViewById(R.id.webView);
 
-        // Dodaj ustawienie DomStorageEnabled
         webView.getSettings().setDomStorageEnabled(true);
 
-        // Otrzymaj URL Street View z poprzedniej aktywności
         String streetViewUrl = getIntent().getStringExtra("STREET_VIEW_URL");
 
         if (streetViewUrl != null && !streetViewUrl.isEmpty()) {
-            // Wyświetl Street View dla przekazanego URL
             webView.getSettings().setJavaScriptEnabled(true);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
@@ -37,7 +34,6 @@ public class StreetViewActivity extends AppCompatActivity {
             });
             webView.loadUrl(streetViewUrl);
         } else {
-            // Wyświetl komunikat w przypadku braku danych
             Toast.makeText(this, "Brak danych o wybranym miejscu", Toast.LENGTH_SHORT).show();
         }
     }
