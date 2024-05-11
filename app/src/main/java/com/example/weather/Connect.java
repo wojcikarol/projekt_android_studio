@@ -10,7 +10,6 @@ import java.sql.Statement;
 import java.text.Normalizer;
 
 public class Connect extends AsyncTask<Void, Void, String> {
-    // Dane do połączenia z bazą danych PostgreSQL
     private static final String URL = "jdbc:postgresql://195.150.230.208:5432/2023_wiatr_jakub";
     private static final String USER = "2023_wiatr_jakub";
     private static final String PASSWORD = "36414";
@@ -18,13 +17,11 @@ public class Connect extends AsyncTask<Void, Void, String> {
     private ConnectionListener listener;
     private String city;
 
-    // Konstruktor przyjmuje listenera jako argument
     public Connect(ConnectionListener listener, String city) {
         this.listener = listener;
         this.city = city;
     }
 
-    // Interfejs ConnectionListener
     public interface ConnectionListener {
         void onQueryComplete(String result);
         void onConnectionFailure();
@@ -37,10 +34,8 @@ public class Connect extends AsyncTask<Void, Void, String> {
             Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
             Statement statement = connection.createStatement();
 
-            // Normalizacja wprowadzonego miasta
             city = normalizeCity(city);
 
-            // Używamy funkcji LOWER(), aby przekonwertować miasto w bazie danych na małe litery
             ResultSet resultSet = statement.executeQuery("SELECT ciekawostka FROM mojabazadanych.ciekawostki WHERE LOWER(miasto) = LOWER('" + city + "')");
 
             StringBuilder stringBuilder = new StringBuilder();
@@ -62,21 +57,18 @@ public class Connect extends AsyncTask<Void, Void, String> {
         return null;
     }
 
-    // Metoda do normalizacji miasta
     private String normalizeCity(String city) {
-        // Normalizacja tekstu z użyciem Form.NFD i usuwanie znaków nieznakowych
         String normalizedCity = Normalizer.normalize(city, Normalizer.Form.NFD)
-                .replaceAll("[^\\p{ASCII}]", ""); // Usunięcie znaków nie-ASCII, np. polskich znaków diakrytycznych
-        // Zwrócenie tekstu w małych literach
+                .replaceAll("[^\\p{ASCII}]", "");
         return normalizedCity.toLowerCase();
     }
 
     @Override
     protected void onPostExecute(String result) {
         if (result != null) {
-            listener.onQueryComplete(result); // Wywołanie metody w listenerze
+            listener.onQueryComplete(result); 
         } else {
-            listener.onConnectionFailure(); // Wywołanie metody w listenerze
+            listener.onConnectionFailure();
         }
     }
 }
