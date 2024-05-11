@@ -25,25 +25,20 @@ public class LocalizationActivity extends AppCompatActivity {
 
         placesListView = findViewById(R.id.placesListView);
 
-        // Otrzymaj dane o miejscach z poprzedniej aktywności
         Intent intent = getIntent();
         ArrayList<String> placesList = intent.getStringArrayListExtra("PLACES_LIST");
 
         if (placesList != null) {
-            // Wyświetl listę miejsc w ListView
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, placesList);
             placesListView.setAdapter(adapter);
 
-            // Obsługa kliknięcia na miejsce w ListView
             placesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     String selectedPlace = (String) parent.getItemAtPosition(position);
 
-                    // Przygotuj URL Street View dla wybranego miejsca
                     String streetViewUrl = prepareStreetViewUrl(selectedPlace);
 
-                    // Przekieruj do StreetViewActivity z URL Street View
                     if (!streetViewUrl.isEmpty()) {
                         Intent streetViewIntent = new Intent(LocalizationActivity.this, StreetViewActivity.class);
                         streetViewIntent.putExtra("STREET_VIEW_URL", streetViewUrl);
@@ -60,7 +55,6 @@ public class LocalizationActivity extends AppCompatActivity {
 
 
     private String prepareStreetViewUrl(String place) {
-        // Tutaj możesz przygotować URL Street View dla różnych miejsc
         if (place.equalsIgnoreCase("Zakrzówek")) {
             return "https://www.google.com/maps/place/Zakrzówek,+Kraków/@50.0376706,19.8968686,14z/data=!3m1!4b1!4m6!3m5!1s0x47165c823f49590b:0xd66b8a41b5e6db48!8m2!3d50.0412396!4d19.9176933!16s%2Fg%2F1tfhf4pt?hl=pl-PL&entry=ttu";
         } else if (place.equalsIgnoreCase("Wawel")) {
