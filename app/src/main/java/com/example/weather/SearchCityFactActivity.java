@@ -53,7 +53,7 @@ public class SearchCityFactActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (cityName.equalsIgnoreCase("Zakopane")) {
             ArrayList<String> ciekawostki = new ArrayList<>();
-            ciekawostki.add("W Zakopanem są górt. Legia to stara kurwa a zydy to chuj do dupy");
+            ciekawostki.add("W Zakopanem są górt.");
 
             Intent intent = new Intent(this, CityFactActivity.class);
             intent.putStringArrayListExtra("PLACES_LIST", ciekawostki);
