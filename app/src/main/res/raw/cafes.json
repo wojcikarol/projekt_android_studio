@@ -1,0 +1,74 @@
+{
+  "cities": {
+    "rzeszow": [
+      "Hola Lola Cafe",
+      "Lodziarnia Fragola",
+      "Kawa Rzeszowska",
+      "Cafe Pijama",
+      "Stary Piernik Cafe"
+    ],
+    "krakow": [
+      "Café Camelot",
+      "Café Lisboa",
+      "Charlotte",
+      "Karma Coffee",
+      "Massolit Books & Café"
+    ],
+    "hel": [
+      "Cafe Bulvar",
+      "Cafe Classic",
+      "Café Latte",
+      "Bar & Cafe Kuter",
+      "Cafe Norda"
+    ],
+    "warsaw": [
+      "Kawiarnia Między Nami",
+      "Café Bristol",
+      "STOR Cafe",
+      "Relaks Café",
+      "Forum"
+    ],
+    "zakopane": [
+      "Cafe Tygodnik Podhalański",
+      "Kawiarnia Kmicic",
+      "Cafe Piano",
+      "STRH Café & Gallery",
+      "Café de Paris"
+    ],
+    "tarnow": [
+      "Stara Łaźnia",
+      "Tatrzańska Cafe",
+      "Café Kratka",
+      "Cafe Tramwaj",
+      "Café Zakątek"
+    ],
+    "zamosc": [
+      "Mazagran Café",
+      "Cafe Bon Bon",
+      "Café Morandówka",
+      "Centralka Café",
+      "Kawiarnia Mazagran"
+    ],
+    "szczecin": [
+      "Café 22",
+      "Columbus Coffee",
+      "Cafe Rower",
+      "Café Niebko",
+      "Café 33"
+    ],
+    "gdansk": [
+      "Drukarnia Café",
+      "Retro Café",
+      "Cafe Józef K.",
+      "Lookier Café",
+      "KaWiarAnka"
+    ],
+    "wroclaw": [
+      "Cafe Targowa",
+      "Café Rozrusznik",
+      "Gniazdo",
+      "Central Cafe",
+      "Cafe Borówka"
+    ]
+  }
+}
